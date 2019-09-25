@@ -1,0 +1,14 @@
+name,amount
+Alice,100
+Bob,-200
+Charlie,300
+Dennis,400
+Edith,-500
+Frank,600
+Alice,200
+Frank,-200
+Bob,600
+Alice,400
+Frank,200
+Alice,300
+Edith,600
