@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+
+    postgres:
+        image: postgres:9.6
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+            - POSTGRES_DB=your_loc
+        # Uncomment these lines to persist data on the local filesystem.
+        #     - PGDATA=/var/lib/postgresql/data/pgdata
+        # volumes:
+        #     - ./pgdata:/var/lib/postgresql/data/pgdata
+
+
+    etlserver:
+        image: python_etl:latest
+        ports:
+          - "3000:3000"
+          - "9000:9000"
+        working_dir: '/data'
+        read_only: false
+        privileged: true
+        tty: true
+
+
