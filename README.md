@@ -37,9 +37,7 @@ testing ETL load
 
 python /data/your_loc/test_DataLoad.py -l /data/your_loc/CSV/ -f test.csv 
 
- 
-
-python /data/your_loc/DataLoad.py -l /data/your_loc/CSV/ -f discover_events.csv 
+  
 
 Dataload method can accept multiple parameters .If we need to change the schema we 
 can always pass that as input .Details are available in class definition
