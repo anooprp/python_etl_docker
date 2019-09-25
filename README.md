@@ -1,8 +1,5 @@
 # docker-your_loc
 
-This repository contains **Dockerfile** for ETL assignment your_loc
-Using macbookpro   [Docker 18.06.1-ce](https://github.com/docker/docker-ce/releases/tag/v18.06.1-ce)
-for this assignment
 
 docker-compose --version
 docker-compose version 1.22.0, build f46880f
@@ -38,7 +35,7 @@ docker exec -it deeb670a0de7 /bin/bash (python_etl:latest container)
 
 testing ETL load
 
-python /data/your_loc/test_DataLoad.py -l /data/your_loc/CSV/ -f events_test.csv 
+python /data/your_loc/test_DataLoad.py -l /data/your_loc/CSV/ -f test.csv 
 
  
 
@@ -54,8 +51,8 @@ docker exec -it 63c3c457fa09 /bin/bash (postgres 9.6 )
 psql -h localhost -U postgres -d your_loc -W
 password :postgres
 
-select COUNT(*) from public.discover_events;
+select COUNT(*) from public.test;
 
-select * from public.fact_discover_events;
+select * from public.fact_test;
 
 
