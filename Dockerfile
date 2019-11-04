@@ -111,7 +111,9 @@ EXPOSE 8080 5555 8793
 
 USER your_loc
 WORKDIR ${ETL_HOME}
-ENTRYPOINT ["/entrypoint.sh"]
+#ENTRYPOINT ["/entrypoint.sh"]
 
 
-CMD ["supervisord", "-n"]
+#CMD ["supervisord", "-n"]
+
+CMD sleep infinity
